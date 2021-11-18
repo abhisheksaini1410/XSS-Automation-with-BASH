@@ -11,7 +11,7 @@ assetfinder_fun
 
 waybackurls_fun(){
 cat $domain/assetfinder/assetfinder_link | waybackurls | anew | tee -a $domain/waybackurls/waybackurls_link
-cat $domain/waybackurls/waybackurls_link | egrep -V ".woff|.ttf|.svg|.eot|.png|.jpeg|.jpg|.svg|.css|.ico|.gif" > $domain/waybackurls/waybackurls_link 
+cat $domain/waybackurls/waybackurls_link | egrep -v ".woff|.ttf|.svg|.eot|.png|.jpeg|.jpg|.svg|.css|.ico|.gif" > $domain/waybackurls/waybackurls_link 
 }
 waybackurls_fun
 
